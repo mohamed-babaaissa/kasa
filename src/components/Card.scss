@@ -1,0 +1,50 @@
+.card {
+  background: #FF6060; /* Couleur de fond */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  text-align: left; /* Alignement du texte à gauche */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%; /* Les cartes prennent toute la largeur de leur colonne */
+  max-width: 400px; /* Largeur maximale pour les cartes */
+  height: 400px; /* Hauteur fixe pour une uniformité */
+  margin: auto; /* Centre la carte dans son conteneur */
+
+  @media (max-width: 768px) {
+    max-width: 100%; /* Supprime la largeur maximale sur les petits écrans */
+    height: auto; /* Permet à la hauteur de s'ajuster */
+  }
+}
+
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-image {
+  width: 100%;
+  height: 300px; /* Réduire la hauteur de l'image */
+  object-fit: cover; /* Conserve les proportions de l'image */
+}
+
+.card-title {
+  padding: 10px;
+  font-size: 1rem; /* Taille du texte */
+  color: white; /* Couleur du texte */
+  word-wrap: break-word; /* Permet au texte de revenir à la ligne */
+  text-align: left; /* Alignement à gauche */
+  height: 50px; /* Hauteur fixe pour garantir un alignement uniforme */
+  display: flex; /* Utilise Flexbox pour gérer le texte */
+  align-items: center; /* Aligne verticalement le texte dans la section */
+  overflow: hidden; /* Coupe le contenu s'il dépasse */
+}
+
+
+
+
+
+

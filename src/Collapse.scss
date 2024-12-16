@@ -1,0 +1,101 @@
+.property-collapse {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Deux colonnes pour desktop */
+  gap: 2rem;
+  margin-top: 2rem;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column; /* Passe en colonne en mobile */
+    gap: 1rem;
+  }
+}
+
+.collapse {
+  margin: 1rem auto;
+  width: 100%;
+  border: 1px solid #ff6060;
+  border-radius: 8px;
+  overflow: hidden; // Cache le débordement
+  transition: border-color 0.3s ease;
+
+  .collapse-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff6060;
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+
+    h2 {
+      margin: 0;
+      font-size: 1.5rem;
+      word-wrap: break-word;
+      max-width: calc(100% - 2rem);
+    }
+
+    .arrow {
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+
+      &.open {
+        transform: rotate(180deg); // Rotation de la flèche
+      }
+    }
+  }
+
+  .collapse-content {
+    max-height: 0; // Cache par défaut
+    opacity: 0; // Rend invisible par défaut
+    overflow: hidden;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 0;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out, padding 0.5s ease-out;
+
+    // Animation lors de l'ouverture
+    &.open {
+      animation: slideOpen 0.5s ease forwards;
+      opacity: 1;
+    }
+  }
+
+  &.open .collapse-content {
+    max-height: 500px; // Ajustez en fonction de votre contenu
+    opacity: 1;
+    padding: 1rem;
+  }
+}
+
+/* Animation keyframes */
+@keyframes slideOpen {
+  0% {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    max-height: 500px; // Ajustez la hauteur maximale
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-collapse {
+  width: 80%; /* Réduit la largeur */
+  margin: 1rem auto; /* Centre les collapses */
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+}
+
+
+
+
+
+
+
+
+

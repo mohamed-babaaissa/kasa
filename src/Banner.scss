@@ -1,0 +1,52 @@
+.banner {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1,5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  margin: 2rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    height: 200px; /* Hauteur ajustée pour les écrans de 768px */
+    h1 {
+      font-size: 1.8rem; /* Taille du texte pour les écrans de 768px */
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.5rem; /* Taille du texte pour les petits écrans */
+    }
+  }
+}
+
+
+
+
+
+

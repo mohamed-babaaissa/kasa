@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Global container */
+.header-footer-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Assure que le conteneur couvre toute la hauteur */
+}
+
+/* Main content */
+.main-content {
+  flex: 1; /* Permet au contenu principal d'occuper tout l'espace disponible */
+  margin: 2rem; /* Ajoute un margin global sauf pour le footer */
+}
+
+header {
+  display: flex; /* Active Flexbox pour organiser les éléments */
+  justify-content: space-between; /* Place le logo à gauche et la navigation à droite */
+  align-items: center; /* Aligne les éléments verticalement */
+  padding: 0 2.5rem; /* Ajoute des marges internes */
+  margin: 2rem 2rem 0;
+}
+
+.header-logo {
+  height: 70px; /* Ajuste la taille du logo */
+  cursor: pointer; /* Change le curseur pour indiquer que le logo est cliquable */
+  
+}
+
+nav ul {
+  display: flex; /* Aligne les liens horizontalement */
+  justify-content: flex-end; /* Les liens sont alignés à droite */
+  list-style: none; /* Supprime les puces */
+  margin: 0;
+  padding: 0;
+  white-space: nowrap; /* Empêche les liens de passer à la ligne */
+  
+}
+
+nav li {
+  margin-left: 4rem; /* Espacement entre les liens */
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+}
+
+nav a:hover {
+  text-decoration: underline; /* Ajoute un soulignement au survol */
+  text-underline-offset: 10px; /* Décale le soulignement plus bas */
+}
+
+nav a.active {
+  text-decoration: underline;
+  text-underline-offset: 10px; /* Décale le trait plus bas */
+  
+}
+
+a {
+  text-decoration: none; /* Supprime le soulignement */
+  color: inherit; /* Prend la couleur du parent */
+}
+
+
+
+footer {
+  position: relative;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-logo {
+  width: 100%; /* Ajuste la taille de l'image */
+  height: 200px;
+  display: block; /* Pour éviter tout espacement autour de l'image */
+  
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center; /* Centrer les liens pour les petits écrans */
+  }
+
+  nav li {
+    margin-left: 1.5rem; /* Réduction de l'espacement entre les liens */
+  }
+
+  nav a {
+    font-size: 1.2rem; /* Réduction de la taille de la police */
+  }
+
+  .footer-logo {
+    content: url("./assets/footermobile.png"); /* Chemin de l'image pour le format mobile */
+    width: 100%;
+  height: 250px;
+  }
+}
+
+/* Media Query pour les écrans <= 480px */
+@media (max-width: 480px) {
+  nav ul {
+    flex-wrap: nowrap; /* Empêche les liens de passer à la ligne */
+  }
+
+  nav a {
+    font-size: 1rem; /* Réduction supplémentaire de la taille de la police */
+  }
+
+
+
+  /* Footer */
+ 
+
+  .footer-logo {
+    content: url("./assets/footermobile.png"); /* Chemin de l'image pour le format mobile */
+    width: 100%;
+    height: 200px;
+  }
+}

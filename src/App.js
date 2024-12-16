@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+// Importation du composant AppRouter, qui gère les routes de l'application
+import AppRouter from "./Router";
 
+// Déclaration du composant fonctionnel "App"
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  // Retourne le composant AppRouter, qui contient toute la logique de routage
+  return <AppRouter />;
 }
 
+// Exportation du composant App pour qu'il soit utilisé comme point d'entrée de l'application
 export default App;
+
+
+
