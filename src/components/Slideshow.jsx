@@ -1,5 +1,5 @@
 import React, { useState } from "react"; // Importe React et le hook useState pour gérer l'état local
-import "../Slideshow.scss"; // Importe les styles spécifiques au composant Slideshow
+import "../assets/styles/Slideshow.scss"; // Importe les styles spécifiques au composant Slideshow
 
 // Déclaration du composant fonctionnel Slideshow
 const Slideshow = ({ images }) => {

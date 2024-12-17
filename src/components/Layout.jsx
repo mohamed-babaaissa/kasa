@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom"; // Importe les composants NavLink et Outlet de React Router
-import headerLogo from "../assets/LOGO.png"; // Importe le logo pour le header
-import footerLogo from "../assets/footer.png"; // Importe le logo pour le footer
+import headerLogo from "../assets/images/LOGO.png"; // Importe le logo pour le header
+import footerLogo from "../assets/images/footer.png"; // Importe le logo pour le footer
 
 const Layout = () => {
   return (

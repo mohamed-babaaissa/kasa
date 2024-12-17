@@ -1,7 +1,7 @@
 import React, { useState } from "react"; // Importation de useState
 import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
-import aboutBanner from "../assets/about-banner.png";
+import aboutBanner from "../assets/images/about-banner.png";
 
 const About = () => {
   // État pour suivre la collapse ouverte
@@ -17,13 +17,16 @@ const About = () => {
       <Banner image={`${aboutBanner}`} text="" />
 
       <div className="about-content">
+        <div>
         <Collapse
         className="about-collapse"
           title="Fiabilité"
           content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes à la réalité, et toutes les informations sont régulièrement vérifiées par nos équipes."
           isOpen={openCollapse === "Fiabilité"}
           onClick={() => toggleCollapse("Fiabilité")}
-        />
+        /> 
+        </div>
+        <div>
         <Collapse
         className="about-collapse"
           title="Respect"
@@ -31,6 +34,8 @@ const About = () => {
           isOpen={openCollapse === "Respect"}
           onClick={() => toggleCollapse("Respect")}
         />
+        </div>
+        <div>
         <Collapse
         className="about-collapse"
           title="Service"
@@ -38,6 +43,8 @@ const About = () => {
           isOpen={openCollapse === "Service"}
           onClick={() => toggleCollapse("Service")}
         />
+        </div>
+        <div>
         <Collapse
         className="about-collapse"
           title="Sécurité"
@@ -45,6 +52,7 @@ const About = () => {
           isOpen={openCollapse === "Sécurité"}
           onClick={() => toggleCollapse("Sécurité")}
         />
+        </div>
       </div>
     </div>
   );

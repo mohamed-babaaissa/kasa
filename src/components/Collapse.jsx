@@ -1,5 +1,5 @@
 import React from "react";
-import "../Collapse.scss";
+import "../assets/styles/Collapse.scss";
 
 const Collapse = ({ className, title, content, isOpen, onClick }) => {
   return (

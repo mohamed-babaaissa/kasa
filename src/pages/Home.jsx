@@ -9,9 +9,9 @@ import Banner from "../components/Banner"; // Composant pour afficher une banni�
 import Card from "../components/Card"; // Composant pour afficher une carte de logement
 
 // Importation du fichier de styles spécifique à la page Home
-import "../Home.scss";
+import "../assets/styles/Home.scss";
 
-import backGroundImage from "../assets/Banner.jpeg";
+import backGroundImage from "../assets/images/Banner.jpeg";
 
 // Déclaration du composant fonctionnel "Home"
 const Home = () => {

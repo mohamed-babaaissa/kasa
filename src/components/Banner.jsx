@@ -2,7 +2,7 @@
 import React from "react";
 
 // Importation des styles spécifiques pour le composant Banner depuis le fichier SCSS
-import "../Banner.scss";
+import "../assets/styles/Banner.scss";
 
 // Déclaration du composant fonctionnel "Banner"
 // Il accepte deux props : "image" (lien de l'image en arrière-plan) et "text" (texte affiché dans la bannière)

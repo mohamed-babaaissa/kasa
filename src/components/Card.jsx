@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"; // Importe le composant Link de React Router pour permettre la navigation entre les pages
-import "./Card.scss"; // Importe le fichier de styles spécifique au composant Card
+import "../assets/styles/Card.scss"; // Importe le fichier de styles spécifique au composant Card
 
 // Déclare le composant fonctionnel Card, qui reçoit trois props : id, title, et cover
 const Card = ({ id, title, cover }) => {

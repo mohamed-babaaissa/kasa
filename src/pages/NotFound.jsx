@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../NotFound.scss"; // Fichier CSS spécifique pour la page 404
+import "../assets/styles/NotFound.scss"; // Fichier CSS spécifique pour la page 404
 
 const NotFound = () => {
   return (

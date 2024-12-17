@@ -3,7 +3,7 @@ import { useParams, Navigate } from "react-router-dom";
 import logements from "../data/logements.json";
 import Slideshow from "../components/Slideshow";
 import Collapse from "../components/Collapse";
-import "../Property.scss";
+import "../assets/styles/Property.scss";
 
 const Property = () => {
   const { id } = useParams();
@@ -57,6 +57,7 @@ const Property = () => {
 
       <div className="property-collapse">
         {/* Collapse pour la description */}
+        <div>
         <Collapse
           className="description-collapse"
           title="Description"
@@ -64,6 +65,9 @@ const Property = () => {
           isOpen={openCollapse === "description"}
           onClick={() => toggleCollapse("description")}
         />
+        </div>
+
+        <div>
 
         {/* Collapse pour les équipements */}
         <Collapse
@@ -79,6 +83,7 @@ const Property = () => {
           isOpen={openCollapse === "equipments"}
           onClick={() => toggleCollapse("equipments")}
         />
+      </div>
       </div>
     </div>
   );
