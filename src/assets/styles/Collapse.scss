@@ -1,95 +1,75 @@
 .property-collapse {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Deux colonnes pour desktop */
-  gap: 2rem;
-  margin-top: 2rem;
+  display: grid; // Utilisation de la grille pour organiser les collapses.
+  grid-template-columns: repeat(2, 1fr); // Deux colonnes de taille égale.
+  gap: 2rem; // Espacement entre les colonnes et les lignes de 2rem.
+  margin-top: 2rem; // Ajout d'une marge supérieure de 2rem.
 
-  @media (max-width: 768px) {
-    display: flex;
-    flex-direction: column; /* Passe en colonne en mobile */
-    gap: 1rem;
+  @media (max-width: 768px) { // Media query pour les écrans de largeur maximale 768px.
+    display: flex; // Passe en mode Flexbox.
+    flex-direction: column; // Organise les collapses verticalement.
+    gap: 1rem; // Réduit l'espacement entre les collapses à 1rem.
   }
 }
 
 .collapse {
-  margin: 1rem auto;
-  width: 100%;
-  border: 1px solid #ff6060;
-  border-radius: 8px;
-  overflow: hidden; // Cache le débordement
-  transition: border-color 0.3s ease;
+  margin: 1rem auto; // Centre horizontalement et ajoute une marge verticale de 1rem.
+  width: 100%; // Fixe la largeur à 100% du conteneur parent.
+  border: 1px solid #ff6060; // Bordure rouge autour du collapse.
+  border-radius: 8px; // Arrondit les coins avec un rayon de 8px.
+  overflow: hidden; // Cache tout contenu qui dépasse les limites.
+  transition: border-color 0.3s ease; // Transition fluide sur la couleur de la bordure.
 
   .collapse-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ff6060;
-    color: white;
-    padding: 1rem;
-    cursor: pointer;
+    display: flex; // Active Flexbox pour organiser les enfants horizontalement.
+    justify-content: space-between; // Place les enfants aux extrémités gauche et droite.
+    align-items: center; // Centre verticalement les éléments.
+    background-color: #ff6060; // Couleur de fond rouge.
+    color: white; // Texte blanc.
+    padding: 1rem; // Espacement interne autour du contenu.
+    cursor: pointer; // Change le curseur en "main" pour indiquer une action cliquable.
 
     h2 {
-      margin: 0;
-      font-size: 1.5rem;
-      word-wrap: break-word;
-      max-width: calc(100% - 2rem);
+      margin: 0; // Supprime les marges par défaut du titre.
+      font-size: 1.5rem; // Définit une taille de texte de 1.5rem.
+      word-wrap: break-word; // Permet de couper les mots longs pour éviter les débordements.
+      max-width: calc(100% - 2rem); // Limite la largeur pour éviter que le texte empiète sur la flèche.
     }
 
     .arrow {
-      font-size: 1.5rem;
-      transition: transform 0.3s ease;
+      font-size: 1.5rem; // Taille de la flèche.
+      transition: transform 0.3s ease; // Transition fluide sur la rotation de la flèche.
 
       &.open {
-        transform: rotate(180deg); // Rotation de la flèche
+        transform: rotate(180deg); // Pivote la flèche de 180° lorsqu'elle est ouverte.
       }
     }
   }
 
   .collapse-content {
-    max-height: 0; // Cache par défaut
-    opacity: 0; // Rend invisible par défaut
-    overflow: hidden;
-    background-color: #f9f9f9;
-    color: #333;
-    padding: 0;
-    transition: max-height 0.5s ease-out, opacity 0.5s ease-out, padding 0.5s ease-out;
+    max-height: 0; // Par défaut, cache complètement le contenu.
+    opacity: 0; // Rend le contenu invisible.
+    overflow: hidden; // Cache tout débordement de contenu.
+    padding: 0; // Supprime les marges internes par défaut.
+    transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease; // Transition fluide pour l'ouverture et la fermeture.
 
-    // Animation lors de l'ouverture
     &.open {
-      animation: slideOpen 0.5s ease forwards;
-      opacity: 1;
+      max-height: 500px; // Définit une hauteur maximale adaptée au contenu ouvert.
+      opacity: 1; // Rend le contenu visible.
+      padding: 1rem; // Ajoute un espacement interne lors de l'ouverture.
     }
-  }
-
-  &.open .collapse-content {
-    max-height: 500px; // Ajustez en fonction de votre contenu
-    opacity: 1;
-    padding: 1rem;
-  }
-}
-
-/* Animation keyframes */
-@keyframes slideOpen {
-  0% {
-    max-height: 0;
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  100% {
-    max-height: 500px; // Ajustez la hauteur maximale
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 
 .about-collapse {
-  width: 80%; /* Réduit la largeur */
-  margin: 1rem auto; /* Centre les collapses */
+  width: 80%; // Réduit la largeur du conteneur à 80%.
+  margin: 1rem auto; // Centre horizontalement et ajoute une marge verticale de 1rem.
 
-  @media (max-width: 768px) {
-    width: 90%;
+  @media (max-width: 768px) { // Media query pour les écrans de largeur maximale 768px.
+    width: 90%; // Étend la largeur à 90% pour les petits écrans.
   }
 }
+
+
 
 
 

@@ -1,27 +1,26 @@
 .cards-container {
-  background-color: rgb(250, 247, 247);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
-  gap: 40px;
-  justify-content: center; /* Centre la grille horizontalement */
-  align-items: center; /* Centre les cartes verticalement dans leur conteneur */
-  padding: 40px;
-  margin-top: 40px;
-  border-radius: 15px;
-  margin: 2rem;
+  background-color: rgb(250, 247, 247); /* Définit une couleur d'arrière-plan gris clair */
+  display: grid; /* Active le mode de mise en page en grille */
+  grid-template-columns: repeat(3, 1fr); /* Crée une grille avec 3 colonnes de largeur égale */
+  gap: 40px; /* Définit un espace de 40px entre les éléments de la grille */
+  justify-content: center; /* Centre la grille horizontalement par rapport à son conteneur */
+  align-items: center; /* Centre les cartes verticalement dans les cellules de la grille */
+  padding: 40px; /* Ajoute un espace interne de 40px tout autour des cartes */
+  margin-top: 40px; /* Ajoute une marge supérieure de 40px */
+  border-radius: 15px; /* Ajoute des coins arrondis au conteneur */
+  margin: 2rem; /* Ajoute une marge extérieure uniforme tout autour du conteneur */
 
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(1, 1fr);/* 1 colonne pour les petits écrans */
+  @media (max-width: 768px) { /* Règles appliquées pour les écrans de largeur maximale de 768px */
+    grid-template-columns: repeat(1, 1fr); /* Change la grille en une seule colonne */
   }
 
-  @media (max-width: 768px) {
-    background-color: white; /* Fond blanc pour 768px et moins */
+  @media (max-width: 768px) { /* Règles appliquées pour les écrans de largeur maximale de 768px */
+    background-color: white; /* Change la couleur d'arrière-plan en blanc */
     padding: 0; /* Supprime les marges internes */
-    border-radius: 0; /* Enlève les coins arrondis */
+    border-radius: 0; /* Supprime les coins arrondis pour un design plus carré */
   }
-
-  
 }
+
 
 
 

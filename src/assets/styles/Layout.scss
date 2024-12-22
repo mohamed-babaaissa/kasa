@@ -1,135 +1,127 @@
 body {
-  margin: 0;
+  margin: 0; /* Supprime les marges par défaut du body */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    sans-serif; /* Définit une police par défaut cohérente sur tous les systèmes */
+  -webkit-font-smoothing: antialiased; /* Améliore le rendu des polices sur WebKit */
+  -moz-osx-font-smoothing: grayscale; /* Améliore le rendu des polices sur macOS */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    monospace; /* Définit une police spécifique pour les blocs de code */
 }
 
-/* Global container */
+/* Conteneur principal */
 .header-footer-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Assure que le conteneur couvre toute la hauteur */
+  display: flex; /* Active Flexbox pour organiser les éléments */
+  flex-direction: column; /* Aligne les éléments verticalement */
+  min-height: 100vh; /* Assure que le conteneur couvre toute la hauteur de la fenêtre */
 }
 
-/* Main content */
+/* Contenu principal */
 .main-content {
   flex: 1; /* Permet au contenu principal d'occuper tout l'espace disponible */
-  margin: 2rem; /* Ajoute un margin global sauf pour le footer */
+  margin: 2rem; /* Ajoute un espacement autour du contenu */
 }
 
+/* Styles pour le header */
 header {
   display: flex; /* Active Flexbox pour organiser les éléments */
-  justify-content: space-between; /* Place le logo à gauche et la navigation à droite */
-  align-items: center; /* Aligne les éléments verticalement */
-  padding: 0 2.5rem; /* Ajoute des marges internes */
-  margin: 2rem 2rem 0;
+  justify-content: space-between; /* Positionne le logo à gauche et la navigation à droite */
+  align-items: center; /* Centre verticalement les éléments */
+  padding: 0 2.5rem; /* Ajoute des marges internes gauche et droite */
+  margin: 2rem 2rem 0; /* Ajoute une marge extérieure en haut et sur les côtés */
 }
 
 .header-logo {
-  height: 70px; /* Ajuste la taille du logo */
-  cursor: pointer; /* Change le curseur pour indiquer que le logo est cliquable */
-  
+  height: 70px; /* Définit la hauteur du logo */
+  cursor: pointer; /* Change le curseur en pointeur pour indiquer que le logo est cliquable */
 }
 
+/* Navigation */
 nav ul {
   display: flex; /* Aligne les liens horizontalement */
   justify-content: flex-end; /* Les liens sont alignés à droite */
-  list-style: none; /* Supprime les puces */
-  margin: 0;
-  padding: 0;
+  list-style: none; /* Supprime les puces de la liste */
+  margin: 0; /* Supprime les marges extérieures */
+  padding: 0; /* Supprime les marges intérieures */
   white-space: nowrap; /* Empêche les liens de passer à la ligne */
-  
 }
 
 nav li {
-  margin-left: 4rem; /* Espacement entre les liens */
+  margin-left: 4rem; /* Ajoute un espacement entre chaque lien */
 }
 
 nav a {
-  text-decoration: none;
-  color: black;
-  font-size: 1.5rem;
-  font-weight: 500;
+  text-decoration: none; /* Supprime le soulignement des liens */
+  color: black; /* Définit la couleur du texte des liens */
+  font-size: 1.5rem; /* Définit la taille du texte */
+  font-weight: 500; /* Rend le texte semi-gras */
 }
 
 nav a:hover {
-  text-decoration: underline; /* Ajoute un soulignement au survol */
-  text-underline-offset: 10px; /* Décale le soulignement plus bas */
+  text-decoration: underline; /* Ajoute un soulignement lorsque l'on survole un lien */
+  text-underline-offset: 10px; /* Décale le soulignement pour un meilleur rendu */
 }
 
 nav a.active {
-  text-decoration: underline;
-  text-underline-offset: 10px; /* Décale le trait plus bas */
-  
+  text-decoration: underline; /* Ajoute un soulignement pour indiquer la page active */
+  text-underline-offset: 10px; /* Décale le soulignement pour un meilleur rendu */
 }
 
 a {
-  text-decoration: none; /* Supprime le soulignement */
-  color: inherit; /* Prend la couleur du parent */
+  text-decoration: none; /* Supprime le soulignement de tous les liens */
+  color: inherit; /* Hérite de la couleur du parent */
 }
 
-
-
+/* Styles pour le footer */
 footer {
-  position: relative;
-  text-align: center;
-  padding: 0;
-  margin: 0;
+  position: relative; /* Définit la position comme relative pour le positionnement interne */
+  text-align: center; /* Centre le contenu horizontalement */
+  padding: 0; /* Supprime les marges internes */
+  margin: 0; /* Supprime les marges externes */
 }
 
 .footer-logo {
-  width: 100%; /* Ajuste la taille de l'image */
-  height: 200px;
-  display: block; /* Pour éviter tout espacement autour de l'image */
-  
+  width: 100%; /* Définit la largeur du logo à 100% de son conteneur */
+  height: 200px; /* Définit une hauteur fixe pour le logo */
+  display: block; /* Supprime tout espacement supplémentaire autour de l'image */
 }
 
+/* Responsivité pour les écrans de taille maximale de 768px */
 @media screen and (max-width: 768px) {
   nav ul {
-    justify-content: center; /* Centrer les liens pour les petits écrans */
+    justify-content: center; /* Centre les liens pour les petits écrans */
   }
 
   nav li {
-    margin-left: 1.5rem; /* Réduction de l'espacement entre les liens */
+    margin-left: 1.5rem; /* Réduit l'espacement entre les liens */
   }
 
   nav a {
-    font-size: 1.2rem; /* Réduction de la taille de la police */
+    font-size: 1.2rem; /* Réduit la taille de la police */
   }
 
   .footer-logo {
-    content: url("../images/footermobile.png"); /* Chemin de l'image pour le format mobile */
-    width: 100%;
-  height: 250px;
+    content: url("../images/footermobile.png"); /* Remplace l'image pour les petits écrans */
+    height: 250px; /* Augmente légèrement la hauteur */
   }
 }
 
-/* Media Query pour les écrans <= 480px */
+/* Responsivité pour les écrans de taille maximale de 480px */
 @media (max-width: 480px) {
   nav ul {
     flex-wrap: nowrap; /* Empêche les liens de passer à la ligne */
   }
 
   nav a {
-    font-size: 1rem; /* Réduction supplémentaire de la taille de la police */
+    font-size: 1rem; /* Réduit davantage la taille de la police */
   }
-
-
-
-  /* Footer */
- 
 
   .footer-logo {
-    content: url("../images/footermobile.png"); /* Chemin de l'image pour le format mobile */
-    width: 100%;
-    height: 200px;
+    content: url("../images/footermobile.png"); /* Chemin de l'image spécifique pour le format mobile */
+    height: 200px; /* Ajuste la hauteur pour les très petits écrans */
   }
 }
+

@@ -1,46 +1,45 @@
 .not-found {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: white;
-  min-height: 62vh;
-  padding: 0;
-  margin: 0;
+  display: flex; /* Utilise Flexbox pour centrer les enfants */
+  flex-direction: column; /* Aligne les enfants verticalement */
+  justify-content: center; /* Centre les enfants verticalement */
+  align-items: center; /* Centre les enfants horizontalement */
+  text-align: center; /* Centre le texte dans chaque élément */
+  background-color: white; /* Définit un fond blanc pour toute la section */
+  min-height: 62vh; /* Assure une hauteur minimale pour occuper une partie visible de l'écran */
+  padding: 0; /* Supprime tout espace intérieur */
+  margin: 0; /* Supprime tout espace extérieur */
 }
 
 .error-code {
-  font-size: 20rem;
-  color: #FF6060;
-  margin: 0;
+  font-size: 20rem; /* Taille très grande pour mettre en avant le code d'erreur */
+  color: #FF6060; /* Couleur rouge pour attirer l'attention */
+  margin: 0; /* Supprime tout espace autour du texte */
 }
 
 .error-message {
-  font-size: 1.5rem;
-  color:  #FF6060;
-  margin: 1rem 0;
+  font-size: 1.5rem; /* Taille du texte pour le message d'erreur */
+  color: #FF6060; /* Texte rouge pour correspondre au style du code d'erreur */
+  margin: 1rem 0; /* Espacement en haut et en bas pour séparer des autres éléments */
 }
 
 .return-link {
-  text-decoration: underline;
-  color:black;
-  font-size: 1rem;
-  margin-top: 2rem;
+  text-decoration: underline; /* Ajoute un soulignement pour indiquer un lien */
+  color: black; /* Texte noir pour contraste avec l'erreur rouge */
+  font-size: 1rem; /* Taille réduite pour le lien */
+  margin-top: 2rem; /* Ajoute de l'espace en haut du lien */
 }
 
-
-
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* Styles spécifiques pour les écrans dont la largeur est inférieure ou égale à 768px */
   .error-code {
-    font-size: 6rem;
+    font-size: 6rem; /* Réduit la taille du code d'erreur pour petits écrans */
   }
 
   .error-message {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Réduit la taille du texte pour s'adapter à l'écran */
   }
 
   .return-link {
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Réduit la taille du lien pour s'adapter */
   }
 }
+

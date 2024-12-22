@@ -11,6 +11,7 @@ import Card from "../components/Card"; // Composant pour afficher une carte de l
 // Importation du fichier de styles spécifique à la page Home
 import "../assets/styles/Home.scss";
 
+// Importation de l'image utilisée comme fond pour la bannière
 import backGroundImage from "../assets/images/Banner.jpeg";
 
 // Déclaration du composant fonctionnel "Home"
@@ -30,10 +31,10 @@ const Home = () => {
         {logements.map((logement) => (
           // Chaque carte est associée à un logement via sa clé unique (logement.id)
           <Card
-            key={logement.id} // Clé unique pour React
-            id={logement.id} // Passe l'ID pour la route dynamique
-            title={logement.title} // Titre du logement
-            cover={logement.cover} // Image du logement
+            key={logement.id} // Clé unique pour React (nécessaire pour la liste dynamique)
+            id={logement.id} // Passe l'ID pour les routes dynamiques (navigation)
+            title={logement.title} // Titre du logement affiché sur la carte
+            cover={logement.cover} // Image du logement affichée sur la carte
           />
         ))}
       </div>
@@ -43,6 +44,7 @@ const Home = () => {
 
 // Exportation du composant pour qu'il puisse être utilisé ailleurs dans l'application
 export default Home;
+
 
 
 

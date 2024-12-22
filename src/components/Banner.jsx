@@ -1,22 +1,25 @@
-// Importation de React pour utiliser les fonctionnalités de React
+// Importation de React pour pouvoir utiliser les composants fonctionnels
 import React from "react";
 
-// Importation des styles spécifiques pour le composant Banner depuis le fichier SCSS
+// Importation des styles spécifiques au composant Banner depuis le fichier SCSS associé
 import "../assets/styles/Banner.scss";
 
-// Déclaration du composant fonctionnel "Banner"
-// Il accepte deux props : "image" (lien de l'image en arrière-plan) et "text" (texte affiché dans la bannière)
+// Déclaration du composant fonctionnel Banner
+// Ce composant reçoit deux propriétés (props) : "image" et "text"
 const Banner = ({ image, text }) => {
   return (
-    // La div principale de la bannière
-    // "style" est utilisé pour définir dynamiquement l'image d'arrière-plan via "backgroundImage"
-    <div className="banner" style={{ backgroundImage: `url(${image})` }}>
-      {/* Le titre ou le texte qui sera affiché au-dessus de l'image */}
+    // Conteneur principal de la bannière
+    <div 
+      className="banner" // Classe CSS associée à la bannière
+      style={{ backgroundImage: `url(${image})` }} // Définition dynamique de l'image d'arrière-plan via les styles inline
+    >
+      {/* Affichage du texte superposé sur la bannière */}
       <h1>{text}</h1>
     </div>
   );
 };
 
-// Exportation du composant pour qu'il puisse être utilisé dans d'autres fichiers
+// Exportation du composant pour qu'il puisse être utilisé ailleurs dans l'application
 export default Banner;
+
 
