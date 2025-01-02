@@ -1,47 +1,60 @@
 .card {
-  background: #FF6060; /* Couleur de fond */
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  cursor: pointer;
-  text-align: left; /* Alignement du texte à gauche */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%; /* Les cartes prennent toute la largeur de leur colonne */
-  max-width: 400px; /* Largeur maximale pour les cartes */
-  height: 400px; /* Hauteur fixe pour une uniformité */
+  position: relative; /* Nécessaire pour positionner le titre par-dessus l'image */
+  background: none; /* Supprime la couleur de fond de la carte */
+  border-radius: 10px; /* Coins arrondis */
+  overflow: hidden; /* Cache les débordements */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+  transition: transform 0.3s ease; /* Transition pour l'effet de survol */
+  cursor: pointer; /* Curseur en pointeur */
+  width: 100%; /* La carte prend toute la largeur */
+  max-width: 400px; /* Largeur maximale pour limiter la taille */
+  height: 400px; /* Hauteur fixe pour uniformité */
   margin: auto; /* Centre la carte dans son conteneur */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); // Ajoute une ombre portée pour améliorer la lisibilité du texte.
 
+  &:hover {
+    transform: scale(1.05); /* Effet d'agrandissement au survol */
+  }
+
+  /* Media query pour les écrans entre 375px et 768px */
   @media (max-width: 768px) {
-    max-width: 100%; /* Supprime la largeur maximale sur les petits écrans */
-    height: auto; /* Permet à la hauteur de s'ajuster */
+    max-width: 100%; /* La carte occupe toute la largeur disponible */
+    height: 300px; /* Fixe une hauteur cohérente pour ces écrans */
   }
 }
 
-
-.card:hover {
-  transform: scale(1.05);
-}
-
 .card-image {
-  width: 100%;
-  height: 300px; /* Réduire la hauteur de l'image */
-  object-fit: cover; /* Conserve les proportions de l'image */
+  width: 100%; /* L'image couvre toute la largeur de la carte */
+  height: 100%; /* L'image couvre toute la hauteur de la carte */
+  object-fit: cover; /* Conserve les proportions de l'image tout en remplissant l'espace */
+  display: block; /* S'assure que l'image est un élément de bloc */
 }
 
 .card-title {
-  padding: 10px;
-  font-size: 1rem; /* Taille du texte */
-  color: white; /* Couleur du texte */
-  word-wrap: break-word; /* Permet au texte de revenir à la ligne */
-  text-align: left; /* Alignement à gauche */
-  height: 50px; /* Hauteur fixe pour garantir un alignement uniforme */
-  display: flex; /* Utilise Flexbox pour gérer le texte */
-  align-items: center; /* Aligne verticalement le texte dans la section */
-  overflow: hidden; /* Coupe le contenu s'il dépasse */
+  position: absolute; /* Superpose le titre sur l'image */
+  bottom: 0; /* Positionne le titre en bas de la carte */
+  left: 0;
+  right: 0;
+
+  color: white; /* Texte blanc */
+  padding: 10px; /* Ajoute un espacement interne */
+  font-size: 1.2rem; /* Taille du texte */
+  line-height: 1.5; /* Hauteur de ligne uniforme */
+  height: 60px; /* Hauteur fixe pour uniformiser toutes les cartes */
+  display: flex; /* Utilise Flexbox pour gérer l'alignement */
+  align-items: center; /* Aligne verticalement le texte */
+  justify-content: flex-start; /* Le texte commence à gauche */
+  text-align: left; /* Aligne le texte à gauche */
+  overflow: hidden; /* Coupe le texte s'il dépasse */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Ombre subtile pour la lisibilité */
 }
+
+
+
+
+
+
+
 
 
 

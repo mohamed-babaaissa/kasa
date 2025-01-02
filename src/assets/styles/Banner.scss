@@ -12,8 +12,8 @@
   font-size: 1,5rem; // Définit une taille de police incorrecte (virgule au lieu de point).
   font-weight: bold; // Rend le texte en gras.
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); // Ajoute une ombre portée pour améliorer la lisibilité du texte.
-  margin: 2rem; // Ajoute une marge externe de 2rem autour de la bannière.
-
+  margin: 1.5rem; // Ajoute une marge externe de 2rem autour de la bannière.
+  padding: 1rem;
   &::before {
     content: ""; // Crée un pseudo-élément avant pour l'overlay.
     position: absolute; // Position absolue pour couvrir toute la bannière.
@@ -29,9 +29,10 @@
     position: relative; // Position relative pour le placer au-dessus de l'overlay.
     z-index: 2; // Assure que le texte est au-dessus de l'overlay.
     font-size: 3rem; // Définit une taille de police importante pour le titre.
+    word-wrap: break-word;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 768px) and (min-width: 375px) {
     height: 200px; // Réduit la hauteur pour les écrans dont la largeur est inférieure ou égale à 768px.
 
     h1 {
@@ -39,11 +40,20 @@
     }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 375px) {
+    height: 180px; /* Ajuste la hauteur pour les très petits écrans */
+    padding: 0.5rem; /* Réduit le padding pour économiser de l'espace */
+
     h1 {
-      font-size: 1.5rem; // Réduit encore plus la taille du texte pour les petits écrans.
+      font-size: 1.4rem; /* Réduit la taille du texte pour éviter le débordement */
+      line-height: 1.2; /* Ajuste l'espacement entre les lignes */
+      text-align:start; /* Centre le texte horizontalement */
+      word-wrap: break-word; /* Force le texte à aller à la ligne s'il est trop long */
+      margin: 0; /* Supprime les marges autour du texte */
     }
   }
+
+ 
 }
 
 

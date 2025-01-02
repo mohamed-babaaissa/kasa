@@ -1,6 +1,6 @@
 .property {
   margin: 0 auto; /* Centre le contenu horizontalement */
-  padding: 0 2.5rem; /* Ajoute un padding à gauche et à droite pour aligner avec le header */
+  padding: 0 1.5rem; /* Ajoute un padding à gauche et à droite pour aligner avec le header */
 
   .property-header {
     display: flex; /* Utilise Flexbox pour l'agencement horizontal */
@@ -8,34 +8,41 @@
     align-items: center; /* Centre verticalement les éléments */
     margin-bottom: 2rem; /* Ajoute un espace en bas pour séparer les sections */
 
-    .property-details {
-      max-width: 70%; /* Limite la largeur des détails pour une bonne répartition avec le propriétaire */
-    }
+   
 
     .property-title {
       font-size: 2rem; /* Taille du texte pour le titre */
-      font-weight: bold; /* Texte en gras */
-      color: #333; /* Couleur grise foncée */
+      color: #ff6060; /* Couleur grise foncée */
       margin-bottom: 0.5rem; /* Espacement en bas pour séparer du lieu */
+      font-weight: normal;
     }
 
     .property-location {
+      display: flex;
+      justify-content: flex-start;
       font-size: 1.2rem; /* Taille réduite pour le lieu */
       color: #555; /* Couleur grise moyenne */
       margin-bottom: 1rem; /* Espacement en bas */
     }
 
     .property-tags {
-      display: flex; /* Aligne les tags horizontalement */
-      flex-wrap: wrap; /* Permet aux tags de passer à la ligne si nécessaire */
-      gap: 0.5rem; /* Espace entre chaque tag */
-
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      justify-content: flex-start;
+      max-width: 100%; /* Limite la largeur pour éviter tout débordement */
+      
+    
       .tag {
-        background-color: #ff6060; /* Couleur de fond rouge */
-        color: white; /* Texte blanc */
-        font-size: 0.9rem; /* Taille de la police réduite */
-        padding: 0.5rem 1rem; /* Ajoute de l'espace intérieur autour du texte */
-        border-radius: 10px; /* Arrondit les coins */
+        background-color: #ff6060;
+        color: white;
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        border-radius: 15px;
+        white-space: nowrap;
+        
+       
       }
     }
 
@@ -52,7 +59,6 @@
 
         .owner-name {
           font-size: 1.2rem; /* Taille du texte du nom */
-          font-weight: bold; /* Texte en gras */
           color: #ff6060; /* Texte en rouge */
           text-align: center; /* Centre le texte */
           line-height: 1.5; /* Espacement vertical dans le texte */
@@ -66,7 +72,6 @@
           height: 80px; /* Taille de l'image */
           border-radius: 50%; /* Rend l'image circulaire */
           object-fit: cover; /* Ajuste l'image pour remplir son conteneur tout en conservant les proportions */
-          border: 2px solid #ff6060; /* Ajoute une bordure rouge autour de la photo */
         }
       }
 
@@ -89,30 +94,55 @@
   }
 
   /* Styles responsives pour les petits écrans */
-  @media (max-width: 768px) {
+  @media (max-width: 768px){
+    .property{
+      margin: 0;
+    }
     .property-header {
       display: flex;
       flex-wrap: wrap; /* Permet aux éléments de s'empiler si nécessaire */
       justify-content: space-between; /* Maintient les extrémités alignées horizontalement */
       align-items: flex-start; /* Aligne les enfants en haut verticalement */
+      overflow: hidden; /* Empêche les débordements */
+      max-width: 100%; /* Limite la largeur du conteneur */
 
       .property-details {
         width: 100%; /* Occupe toute la largeur sur petits écrans */
         margin-bottom: 1rem; /* Espacement en bas pour séparer des autres éléments */
       }
+      
 
       .property-tags {
-        display: flex;
-        flex-wrap: nowrap; /* Empêche les tags de passer à la ligne */
-        gap: 0.5rem; /* Espacement entre les tags */
-        margin-bottom: 0.5rem; /* Espacement avec les autres éléments */
+        
+        gap: 0.3rem; /* Espace entre les tags */
+       
+      
+        .tag {
+          padding: 0.4rem 0.8rem;
+          font-size: 0.8rem; /* Taille de la police */
+          
+          border-radius: 15px; /* Arrondit les coins */
+          white-space: nowrap; /* Empêche le contenu d'un tag de se couper sur plusieurs lignes */
+        }
+      }
+      
+
+      .property-title {
+        font-size: 1.8rem; /* Taille légèrement réduite pour les petits écrans */
+        margin-bottom: 0.5rem; /* Espacement sous le titre */
+
+      }
+
+      .property-location {
+        font-size: 1rem; /* Réduit la taille pour les petits écrans */
+        margin-bottom: 1rem; /* Espacement sous le lieu */
+        text-align: center; /* Centre le texte */
       }
 
       .property-rating {
         align-self: flex-start; /* Aligne les étoiles à gauche */
         display: flex; /* Maintient un alignement horizontal */
         gap: 0.3rem; /* Espacement entre les étoiles */
-        margin-top: 0; /* Supprime tout espacement supérieur */
         margin-bottom: 1rem; /* Ajoute un espacement en bas */
       }
 
@@ -120,7 +150,7 @@
         width: 100%; /* Occupe toute la largeur sur petits écrans */
         display: flex;
         flex-direction: row-reverse; /* Positionne l'image en premier */
-        align-items: flex-end; /* Aligne les éléments à droite */
+        align-items: center; /* Centre verticalement */
         justify-content: space-between; /* Sépare les éléments horizontalement */
 
         .owner-info {
@@ -129,22 +159,13 @@
           gap: 0.5rem; /* Espacement entre le texte et l'image */
           margin-bottom: 1rem; /* Espacement en bas pour séparer du reste */
         }
+
+        .owner-picture {
+          width: 60px; /* Réduit la taille de l'image sur petits écrans */
+          height: 60px; /* Garde les proportions circulaires */
+        }
       }
     }
   }
-}
-
-
   
-
-
-
-
-
-
-
-
-
-
-
-
+}

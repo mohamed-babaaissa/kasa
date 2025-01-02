@@ -1,7 +1,7 @@
 // Importation des composants et des fichiers nécessaires
 import { NavLink, Outlet } from "react-router-dom"; // NavLink pour les liens de navigation avec gestion de l'état actif, Outlet pour rendre les routes enfants dynamiquement
 import headerLogo from "../assets/images/LOGO.png"; // Logo utilisé dans le header
-import footerLogo from "../assets/images/footer.png"; // Logo utilisé dans le footer
+import footerLogo from "../assets/images/LOGO-footer.svg"; // Logo utilisé dans le footer
 
 // Déclaration du composant Layout
 const Layout = () => {
@@ -52,13 +52,16 @@ const Layout = () => {
         {/* Rend dynamiquement le contenu de la route enfant */}
       </main>
 
-      {/* Début de la section Footer */}
-      <footer>
-        <img 
-          src={footerLogo} // Source du logo pour le footer
-          alt="Kasa Footer Logo" // Texte alternatif pour le logo
-          className="footer-logo" // Classe CSS pour styliser le logo
-        />
+    {/* Début de la section Footer */}
+    <footer className="footer">
+        <div className="footer-logo-container">
+          <img 
+            src={footerLogo} // Source de l'image du logo pour le footer
+            alt="Kasa Footer Logo" // Texte alternatif pour le logo
+            className="footer-logo" // Classe CSS pour styliser le logo
+          />
+        </div>
+        <p className="footer-text">© 2020 Kasa. All rights reserved</p>
       </footer>
       {/* Fin de la section Footer */}
     </div>
