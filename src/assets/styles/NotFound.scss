@@ -19,7 +19,7 @@
 .error-message {
   font-size: 1.5rem; /* Taille du texte pour le message d'erreur */
   color: #FF6060; /* Texte rouge pour correspondre au style du code d'erreur */
-  margin: 1rem 0; /* Espacement en haut et en bas pour séparer des autres éléments */
+  margin: 1rem; /* Espacement en haut et en bas pour séparer des autres éléments */
 }
 
 .return-link {
@@ -29,7 +29,7 @@
   margin-top: 2rem; /* Ajoute de l'espace en haut du lien */
 }
 
-@media (max-width: 768px) and (min-width: 375px) { /* Styles spécifiques pour les écrans dont la largeur est inférieure ou égale à 768px */
+@media (max-width: 768px) { /* Styles spécifiques pour les écrans dont la largeur est inférieure ou égale à 768px */
   .error-code {
     font-size: 6rem; /* Réduit la taille du code d'erreur pour petits écrans */
   }

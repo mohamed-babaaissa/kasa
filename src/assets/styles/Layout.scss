@@ -11,20 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-/* Conteneur principal */
 .header-footer-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* Contenu principal */
 .main-content {
   flex: 1;
   margin: 2rem;
 }
 
-/* Styles pour le header */
 header {
   display: flex;
   justify-content: space-between;
@@ -38,7 +35,6 @@ header {
   cursor: pointer;
 }
 
-/* Navigation */
 nav ul {
   display: flex;
   justify-content: flex-end;
@@ -74,7 +70,6 @@ a {
   color: inherit;
 }
 
-/* Styles pour le footer */
 footer {
   background-color: #000000;
   color: #FFFFFF;
@@ -92,7 +87,6 @@ footer {
   font-family: Arial, sans-serif;
 }
 
-/* Responsivité pour les écrans de 0 à 768px */
 @media screen and (max-width: 768px) {
   header {
     padding: 1rem 2rem;
@@ -151,6 +145,7 @@ footer {
     word-wrap: break-word;
   }
 }
+
 
 
 

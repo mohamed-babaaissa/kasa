@@ -1,68 +1,68 @@
 .slideshow {
-  position: relative; /* Définit un contexte pour les positions absolues des éléments enfants */
-  width: 100%; /* La largeur du diaporama occupe tout l'espace disponible */
-  height: 600px; /* Hauteur fixe pour le diaporama */
-  border-radius: 15px; /* Arrondit les coins de l'ensemble du diaporama */
-  overflow: hidden; /* Empêche les éléments dépassant des limites du conteneur d'être visibles */
+  position: relative;
+  width: 100%;
+  height: 600px;
+  border-radius: 15px;
+  overflow: hidden;
 
   .slide {
-    width: 100%; /* Chaque image occupe toute la largeur du diaporama */
-    height: 100%; /* Chaque image remplit toute la hauteur du diaporama */
-    object-fit: cover; /* Ajuste l'image pour remplir l'espace tout en maintenant ses proportions */
-    border-radius: 15px; /* Arrondit également les coins des images pour correspondre au conteneur */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
   }
 
   .prev,
   .next {
-    position: absolute; /* Les flèches sont positionnées par rapport au conteneur parent */
-    top: 50%; /* Centré verticalement */
-    transform: translateY(-50%); /* Correction pour centrer parfaitement */
-    background: none; /* Pas de fond pour les flèches */
-    border: none; /* Pas de bordure */
-    color: white; /* Couleur des flèches */
-    font-size: 4rem; /* Taille de la police pour agrandir les flèches */
-    cursor: pointer; /* Change le curseur en pointeur au survol */
-    padding: 0; /* Supprime tout espacement interne */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 4rem;
+    cursor: pointer;
+    padding: 0;
   }
 
   .prev {
-    left: 10px; /* Positionne la flèche à gauche */
+    left: 10px;
   }
 
   .next {
-    right: 10px; /* Positionne la flèche à droite */
+    right: 10px;
   }
 
   .slide-number {
-    position: absolute; /* Permet de positionner précisément le numéro de la slide */
-    bottom: 10px; /* Positionné à 10px du bas */
-    left: 50%; /* Centré horizontalement par rapport au conteneur parent */
-    transform: translateX(-50%); /* Correction pour un centrage parfait */
-    color: white; /* Couleur du texte en blanc */
-    font-size: 1.2rem; /* Taille de la police */
-    text-align: center; /* Centre le texte */
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
   }
 
-   /* Responsivité pour les écrans entre 375px et 768px */
-   @media (max-width: 768px) {
-    height: auto; /* La hauteur devient adaptable */
-    aspect-ratio: 16 / 9; /* Définit un ratio pour que la hauteur s'ajuste en fonction de la largeur */
+  @media (max-width: 768px) {
+    height: auto;
+    aspect-ratio: 16 / 9;
 
     .slide {
-      height: 100%; /* L'image remplit l'espace disponible */
-      object-fit: cover; /* Maintient les proportions de l'image */
+      height: 100%;
+      object-fit: cover;
     }
 
     .prev,
     .next {
-      font-size: 2.5rem; /* Réduit la taille des flèches sur les petits écrans */
+      font-size: 2.5rem;
     }
 
     .slide-number {
-      font-size: 1rem; /* Réduit légèrement la taille du numéro de slide */
+      font-size: 1rem;
     }
   }
 }
+
 
 
 

@@ -1,75 +1,65 @@
 // Importation des composants et des fichiers nécessaires
-import { NavLink, Outlet } from "react-router-dom"; // NavLink pour les liens de navigation avec gestion de l'état actif, Outlet pour rendre les routes enfants dynamiquement
-import headerLogo from "../assets/images/LOGO.png"; // Logo utilisé dans le header
-import footerLogo from "../assets/images/LOGO-footer.svg"; // Logo utilisé dans le footer
+import { NavLink, Outlet } from "react-router-dom";
+import headerLogo from "../assets/images/LOGO.png";
+import footerLogo from "../assets/images/LOGO-footer.svg";
 
 // Déclaration du composant Layout
 const Layout = () => {
   return (
-    // Conteneur global pour le header, le contenu principal et le footer
     <div className="header-footer-container"> 
-
-      {/* Début de la section Header */}
+      {/* Header */}
       <header>
-        {/* Lien vers la page d'accueil avec le logo */}
-        <NavLink to="/"> 
+        <NavLink to="/">
           <img 
-            src={`${headerLogo}`} // Source du logo, importée précédemment
-            alt="Kasa Logo" // Texte alternatif pour le logo (important pour l'accessibilité)
-            className="header-logo" // Classe CSS pour styliser le logo
+            src={`${headerLogo}`} 
+            alt="Kasa Logo" 
+            className="header-logo" 
           /> 
         </NavLink>
-
-        {/* Section de navigation avec des liens */}
         <nav>
-          <ul> {/* Liste des liens de navigation */}
-            <li> {/* Élément de liste pour le lien vers la page d'accueil */}
+          <ul>
+            <li>
               <NavLink
-                to="/" // URL de destination
+                to="/" 
                 className={({ isActive }) => (isActive ? "active" : undefined)} 
-                // Ajoute la classe "active" si le lien correspond à la route actuelle
               >
-                Accueil {/* Texte affiché pour ce lien */}
+                Accueil
               </NavLink>
             </li>
-            <li> {/* Élément de liste pour le lien vers la page "À propos" */}
+            <li>
               <NavLink
-                to="/about" // URL de destination
+                to="/about" 
                 className={({ isActive }) => (isActive ? "active" : undefined)} 
-                // Ajoute la classe "active" si le lien est actif
               >
-                À propos {/* Texte affiché pour ce lien */}
+                À propos
               </NavLink>
             </li>
           </ul>
         </nav>
       </header>
-      {/* Fin de la section Header */}
 
-      {/* Section principale */}
+      {/* Contenu principal */}
       <main className="main-content">
         <Outlet /> 
-        {/* Rend dynamiquement le contenu de la route enfant */}
       </main>
 
-    {/* Début de la section Footer */}
-    <footer className="footer">
+      {/* Footer */}
+      <footer className="footer">
         <div className="footer-logo-container">
           <img 
-            src={footerLogo} // Source de l'image du logo pour le footer
-            alt="Kasa Footer Logo" // Texte alternatif pour le logo
-            className="footer-logo" // Classe CSS pour styliser le logo
+            src={footerLogo}
+            alt="Kasa Footer Logo" 
+            className="footer-logo" 
           />
         </div>
         <p className="footer-text">© 2020 Kasa. All rights reserved</p>
       </footer>
-      {/* Fin de la section Footer */}
     </div>
   );
 };
 
-// Exportation du composant pour l'utiliser dans d'autres parties de l'application
 export default Layout;
+
 
 
 

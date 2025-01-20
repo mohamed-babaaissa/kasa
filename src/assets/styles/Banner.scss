@@ -1,60 +1,60 @@
 .banner {
-  height: 220px; // Définit une hauteur fixe de 220px pour la bannière.
-  background-size: cover; // Assure que l'image de fond couvre toute la bannière.
-  background-position: center; // Centre l'image de fond horizontalement et verticalement.
-  border-radius: 15px; // Ajoute des coins arrondis avec un rayon de 15px.
-  position: relative; // Permet l'utilisation de pseudo-éléments positionnés.
-  overflow: hidden; // Coupe tout contenu qui dépasse les limites de la bannière.
-  display: flex; // Active Flexbox pour organiser le contenu interne.
-  justify-content: center; // Centre les éléments horizontalement.
-  align-items: center; // Centre les éléments verticalement.
-  color: white; // Définit la couleur du texte en blanc.
-  font-size: 1,5rem; // Définit une taille de police incorrecte (virgule au lieu de point).
-  font-weight: bold; // Rend le texte en gras.
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); // Ajoute une ombre portée pour améliorer la lisibilité du texte.
-  margin: 1.5rem; // Ajoute une marge externe de 2rem autour de la bannière.
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  margin: 1.5rem;
   padding: 1rem;
+
   &::before {
-    content: ""; // Crée un pseudo-élément avant pour l'overlay.
-    position: absolute; // Position absolue pour couvrir toute la bannière.
-    top: 0; // Positionné au bord supérieur.
-    left: 0; // Positionné au bord gauche.
-    right: 0; // Positionné au bord droit.
-    bottom: 0; // Positionné au bord inférieur.
-    background: rgba(0, 0, 0, 0.4); // Overlay semi-transparent noir (opacité de 0.4).
-    z-index: 1; // Assure que l'overlay est derrière le contenu principal.
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
   }
 
   h1 {
-    position: relative; // Position relative pour le placer au-dessus de l'overlay.
-    z-index: 2; // Assure que le texte est au-dessus de l'overlay.
-    font-size: 3rem; // Définit une taille de police importante pour le titre.
+    position: relative;
+    z-index: 2;
+    font-size: 3rem;
     word-wrap: break-word;
   }
 
   @media (max-width: 768px) and (min-width: 375px) {
-    height: 200px; // Réduit la hauteur pour les écrans dont la largeur est inférieure ou égale à 768px.
+    height: 200px;
 
     h1 {
-      font-size: 1.8rem; // Réduit la taille du texte pour les écrans de taille moyenne.
+      font-size: 1.8rem;
     }
   }
 
   @media (max-width: 375px) {
-    height: 180px; /* Ajuste la hauteur pour les très petits écrans */
-    padding: 0.5rem; /* Réduit le padding pour économiser de l'espace */
+    height: 180px;
+    padding: 0.5rem;
 
     h1 {
-      font-size: 1.4rem; /* Réduit la taille du texte pour éviter le débordement */
-      line-height: 1.2; /* Ajuste l'espacement entre les lignes */
-      text-align:start; /* Centre le texte horizontalement */
-      word-wrap: break-word; /* Force le texte à aller à la ligne s'il est trop long */
-      margin: 0; /* Supprime les marges autour du texte */
+      font-size: 1.4rem;
+      line-height: 1.2;
+      text-align: start;
+      word-wrap: break-word;
+      margin: 0;
     }
   }
-
- 
 }
+
 
 
 

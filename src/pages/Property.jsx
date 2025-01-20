@@ -51,8 +51,9 @@ const Property = () => {
           </div>
         </div>
       </div>
-
+    
       <div className="property-collapse">
+        <div className="showCollapse">
         <Collapse
           className="description-collapse"
           title="Description"
@@ -60,6 +61,8 @@ const Property = () => {
           isOpen={openCollapse === "description"}
           onClick={() => toggleCollapse("description")}
         />
+          </div>
+          <div className="w-48">
         <Collapse
           className="equipments-collapse"
           title="Équipements"
@@ -73,6 +76,7 @@ const Property = () => {
           isOpen={openCollapse === "equipments"}
           onClick={() => toggleCollapse("equipments")}
         />
+        </div>
       </div>
     </div>
   );

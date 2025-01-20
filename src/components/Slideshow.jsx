@@ -1,58 +1,50 @@
-// Importation des dépendances nécessaires
-import React, { useState } from "react"; // Importe React et le hook useState pour gérer l'état local
-import "../assets/styles/Slideshow.scss"; // Importe les styles spécifiques au composant Slideshow
+import React, { useState } from "react"; // Import de React et du hook useState
+import "../assets/styles/Slideshow.scss"; // Import des styles pour le composant
 
-// Déclaration du composant fonctionnel Slideshow
 const Slideshow = ({ images }) => {
-  // État local pour gérer l'index de l'image courante
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Fonction pour passer à l'image suivante
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => 
-      (prevIndex + 1) % images.length // Incrémente l'index et revient à 0 après la dernière image
+      (prevIndex + 1) % images.length // Passe à l'image suivante ou revient au début
     );
   };
 
-  // Fonction pour revenir à l'image précédente
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1 // Si on est à la première image, on passe à la dernière, sinon on décrémente
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1 // Passe à l'image précédente ou va à la dernière
     );
   };
 
   return (
-    <div className="slideshow"> {/* Conteneur principal du diaporama */}
-      {/* Image courante */}
+    <div className="slideshow">
       <img
-        src={images[currentIndex]} // Source de l'image basée sur l'index courant
-        alt={`Slide ${currentIndex + 1}`} // Texte alternatif pour l'image avec l'index affiché
-        className="slide" // Classe CSS pour appliquer des styles à l'image
+        src={images[currentIndex]}
+        alt={`Slide ${currentIndex + 1}`}
+        className="slide"
       />
 
-      {/* Flèches de navigation */}
-      {images.length > 1 && ( // Affiche les flèches uniquement si le diaporama contient plusieurs images
+      {images.length > 1 && (
         <>
           <button className="prev" onClick={prevSlide}>
-            &#10094; {/* Code HTML pour la flèche gauche */}
+            &#10094;
           </button>
           <button className="next" onClick={nextSlide}>
-            &#10095; {/* Code HTML pour la flèche droite */}
+            &#10095;
           </button>
         </>
       )}
 
-      {/* Indicateur de numérotation */}
-      {images.length > 1 && ( // Affiche la numérotation uniquement s'il y a plus d'une image
+      {images.length > 1 && (
         <p className="slide-number">
-          {currentIndex + 1} / {images.length} {/* Indique l'image actuelle et le total */}
+          {currentIndex + 1} / {images.length}
         </p>
       )}
     </div>
   );
 };
 
-// Exportation du composant pour l'utiliser ailleurs
 export default Slideshow;
+
 
 

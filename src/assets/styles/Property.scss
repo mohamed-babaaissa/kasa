@@ -1,39 +1,36 @@
 .property {
-  margin: 0 auto; /* Centre le contenu horizontalement */
-  padding: 0 1.5rem; /* Ajoute un padding à gauche et à droite pour aligner avec le header */
+  margin: 0 auto;
+  padding: 0 1.5rem;
 
   .property-header {
-    display: flex; /* Utilise Flexbox pour l'agencement horizontal */
-    justify-content: space-between; /* Place les enfants aux extrémités (détails à gauche, propriétaire à droite) */
-    align-items: center; /* Centre verticalement les éléments */
-    margin-bottom: 2rem; /* Ajoute un espace en bas pour séparer les sections */
-
-   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
 
     .property-title {
-      font-size: 2rem; /* Taille du texte pour le titre */
-      color: #ff6060; /* Couleur grise foncée */
-      margin-bottom: 0.5rem; /* Espacement en bas pour séparer du lieu */
+      font-size: 2rem;
+      color: #ff6060;
+      margin-bottom: 0.5rem;
       font-weight: normal;
     }
 
     .property-location {
       display: flex;
       justify-content: flex-start;
-      font-size: 1.2rem; /* Taille réduite pour le lieu */
-      color: #555; /* Couleur grise moyenne */
-      margin-bottom: 1rem; /* Espacement en bas */
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 1rem;
     }
 
     .property-tags {
       display: flex;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
       gap: 0.5rem;
       margin-bottom: 1rem;
       justify-content: flex-start;
-      max-width: 100%; /* Limite la largeur pour éviter tout débordement */
-      
-    
+      max-width: 100%;
+
       .tag {
         background-color: #ff6060;
         color: white;
@@ -41,131 +38,121 @@
         padding: 0.5rem 1rem;
         border-radius: 15px;
         white-space: nowrap;
-        
-       
       }
     }
 
     .property-owner {
-      display: flex; /* Utilise Flexbox pour agencer le propriétaire */
-      flex-direction: column; /* Agencement vertical */
-      align-items: flex-end; /* Aligne les éléments à droite */
-      justify-content: center; /* Centre verticalement les éléments */
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
 
       .owner-info {
-        display: flex; /* Agencement horizontal pour le nom et la photo */
-        align-items: center; /* Centre verticalement */
-        gap: 1rem; /* Espace entre le nom et la photo */
+        display: flex;
+        align-items: center;
+        gap: 1rem;
 
         .owner-name {
-          font-size: 1.2rem; /* Taille du texte du nom */
-          color: #ff6060; /* Texte en rouge */
-          text-align: center; /* Centre le texte */
-          line-height: 1.5; /* Espacement vertical dans le texte */
-          max-width: 80px; /* Limite la largeur pour éviter les débordements */
-          white-space: normal; /* Autorise les retours à la ligne */
-          word-wrap: break-word; /* Coupe les mots longs si nécessaire */
+          font-size: 1.2rem;
+          color: #ff6060;
+          text-align: center;
+          line-height: 1.5;
+          max-width: 80px;
+          white-space: normal;
+          word-wrap: break-word;
         }
 
         .owner-picture {
-          width: 80px; /* Taille de l'image */
-          height: 80px; /* Taille de l'image */
-          border-radius: 50%; /* Rend l'image circulaire */
-          object-fit: cover; /* Ajuste l'image pour remplir son conteneur tout en conservant les proportions */
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          object-fit: cover;
         }
       }
 
       .property-rating {
-        display: flex; /* Aligne les étoiles horizontalement */
-        gap: 0.3rem; /* Espace entre les étoiles */
-        justify-content: flex-end; /* Aligne les étoiles à droite */
-        margin-top: 1rem; /* Espacement en haut */
+        display: flex;
+        gap: 0.3rem;
+        justify-content: flex-end;
+        margin-top: 1rem;
 
         .star {
-          font-size: 1.5rem; /* Taille des étoiles remplies */
-          color: #ff6060; /* Couleur rouge */
+          font-size: 1.5rem;
+          color: #ff6060;
         }
 
         .star-empty {
-          color: #e3e3e3; /* Couleur gris clair pour les étoiles vides */
+          color: #e3e3e3;
         }
       }
     }
   }
 
-  /* Styles responsives pour les petits écrans */
-  @media (max-width: 768px){
-    .property{
+  @media (max-width: 768px) {
+    .property {
       margin: 0;
     }
     .property-header {
       display: flex;
-      flex-wrap: wrap; /* Permet aux éléments de s'empiler si nécessaire */
-      justify-content: space-between; /* Maintient les extrémités alignées horizontalement */
-      align-items: flex-start; /* Aligne les enfants en haut verticalement */
-      overflow: hidden; /* Empêche les débordements */
-      max-width: 100%; /* Limite la largeur du conteneur */
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      overflow: hidden;
+      max-width: 100%;
 
       .property-details {
-        width: 100%; /* Occupe toute la largeur sur petits écrans */
-        margin-bottom: 1rem; /* Espacement en bas pour séparer des autres éléments */
+        width: 100%;
+        margin-bottom: 1rem;
       }
-      
 
       .property-tags {
-        
-        gap: 0.3rem; /* Espace entre les tags */
-       
-      
+        gap: 0.3rem;
+
         .tag {
           padding: 0.4rem 0.8rem;
-          font-size: 0.8rem; /* Taille de la police */
-          
-          border-radius: 15px; /* Arrondit les coins */
-          white-space: nowrap; /* Empêche le contenu d'un tag de se couper sur plusieurs lignes */
+          font-size: 0.8rem;
+          border-radius: 15px;
+          white-space: nowrap;
         }
       }
-      
 
       .property-title {
-        font-size: 1.8rem; /* Taille légèrement réduite pour les petits écrans */
-        margin-bottom: 0.5rem; /* Espacement sous le titre */
-
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
       }
 
       .property-location {
-        font-size: 1rem; /* Réduit la taille pour les petits écrans */
-        margin-bottom: 1rem; /* Espacement sous le lieu */
-        text-align: center; /* Centre le texte */
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        text-align: center;
       }
 
       .property-rating {
-        align-self: flex-start; /* Aligne les étoiles à gauche */
-        display: flex; /* Maintient un alignement horizontal */
-        gap: 0.3rem; /* Espacement entre les étoiles */
-        margin-bottom: 1rem; /* Ajoute un espacement en bas */
+        align-self: flex-start;
+        display: flex;
+        gap: 0.3rem;
+        margin-bottom: 1rem;
       }
 
       .property-owner {
-        width: 100%; /* Occupe toute la largeur sur petits écrans */
+        width: 100%;
         display: flex;
-        flex-direction: row-reverse; /* Positionne l'image en premier */
-        align-items: center; /* Centre verticalement */
-        justify-content: space-between; /* Sépare les éléments horizontalement */
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
 
         .owner-info {
-          display: flex; /* Maintient un alignement horizontal */
-          align-items: center; /* Centre verticalement */
-          gap: 0.5rem; /* Espacement entre le texte et l'image */
-          margin-bottom: 1rem; /* Espacement en bas pour séparer du reste */
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          margin-bottom: 1rem;
         }
 
         .owner-picture {
-          width: 60px; /* Réduit la taille de l'image sur petits écrans */
-          height: 60px; /* Garde les proportions circulaires */
+          width: 60px;
+          height: 60px;
         }
       }
     }
   }
-  
 }
