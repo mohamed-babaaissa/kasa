@@ -31,7 +31,7 @@ const Layout = () => {
                 to="/about" 
                 className={({ isActive }) => (isActive ? "active" : undefined)} 
               >
-                À propos
+                A Propos
               </NavLink>
             </li>
           </ul>
@@ -52,7 +52,7 @@ const Layout = () => {
             className="footer-logo" 
           />
         </div>
-        <p className="footer-text">© 2020 Kasa. All rights reserved</p>
+        <p className="footer-text">© 2020 Kasa. All<span className="footer-break"> rights reserved</span></p>
       </footer>
     </div>
   );

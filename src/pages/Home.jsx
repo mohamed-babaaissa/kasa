@@ -9,10 +9,10 @@ const Home = () => {
   return (
     <div>
       {/* Bannière avec image de fond et texte */}
-      <Banner
-        image={`${backGroundImage}`}
-        text="Chez vous, partout et ailleurs"
-      />
+      <Banner image={backGroundImage}>
+  Chez vous,<span className="banner-break"> partout et ailleurs</span>
+</Banner>
+
 
       {/* Grille dynamique des cartes des logements */}
       <div className="cards-container">

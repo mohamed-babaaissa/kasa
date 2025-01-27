@@ -19,15 +19,16 @@
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 20px;
   }
 }
 
 .collapse {
   margin: 1rem auto;
   width: 100%;
+  height: 52px;
   border: 1px solid #ff6060;
-  border-radius: 8px;
+  border-radius: 5px;
   overflow: hidden;
   transition: border-color 0.3s ease;
 
@@ -43,7 +44,7 @@
 
   .collapse-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: #ff6060;
     color: white;
@@ -52,14 +53,16 @@
 
     h2 {
       margin: 0;
-      font-size: 1.2rem;
       white-space: nowrap;
       max-width: calc(100% - 2rem);
+      text-align: center; /* Centre le texte */
+    
     }
 
     .arrow {
       font-size: 1.5rem;
       transition: transform 0.3s ease;
+      margin-left: auto; 
 
       &.open {
         transform: rotate(180deg);
@@ -73,25 +76,42 @@
     overflow: hidden;
     padding: 0;
     transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
-
+  
     &.open {
-      max-height: 500px;
+      display: block !important; /* ✅ Assure que c'est visible */
+      max-height: 1000px; /* ✅ Ajuste selon le contenu */
       opacity: 1;
+      visibility: visible;
       padding: 1rem;
     }
   }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 }
 
 .about-collapse {
   width: 80%;
-  margin: 1rem auto;
+  margin: 2rem auto;
 
   @media (max-width: 768px) and (min-width: 375px) {
     width: 90%;
+    font-size: 13px;
   }
 
   @media (max-width: 375px) {
-    font-size: 0.8rem;
+    font-size: 13px;
   }
 }
 

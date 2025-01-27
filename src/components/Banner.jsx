@@ -6,20 +6,19 @@ import "../assets/styles/Banner.scss";
 
 // Déclaration du composant fonctionnel Banner
 // Ce composant reçoit deux propriétés (props) : "image" et "text"
-const Banner = ({ image, text }) => {
+const Banner = ({ image, children }) => {
   return (
-    // Conteneur principal de la bannière
     <div 
-      className="banner" // Classe CSS associée à la bannière
-      style={{ backgroundImage: `url(${image})` }} // Définition dynamique de l'image d'arrière-plan via les styles inline
+      className="banner"
+      style={{ backgroundImage: `url(${image})` }}
     >
-      {/* Affichage du texte superposé sur la bannière */}
-      <h1>{text}</h1>
+      <h1>{children}</h1> {/* Affiche le texte avec le `<span>` inclus */}
     </div>
   );
 };
 
-// Exportation du composant pour qu'il puisse être utilisé ailleurs dans l'application
 export default Banner;
+
+
 
 

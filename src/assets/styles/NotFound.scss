@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+
 .not-found {
   display: flex; /* Utilise Flexbox pour centrer les enfants */
   flex-direction: column; /* Aligne les enfants verticalement */
@@ -8,16 +11,23 @@
   min-height: 62vh; /* Assure une hauteur minimale pour occuper une partie visible de l'écran */
   padding: 0; /* Supprime tout espace intérieur */
   margin: 0; /* Supprime tout espace extérieur */
+  gap: 25px;
 }
 
 .error-code {
-  font-size: 20rem; /* Taille très grande pour mettre en avant le code d'erreur */
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 12rem; /* Taille très grande pour mettre en avant le code d'erreur */
+  height: 263px;
+  width: 597px;
+  font-weight: 700;
   color: #FF6060; /* Couleur rouge pour attirer l'attention */
-  margin: 0; /* Supprime tout espace autour du texte */
+  margin: 2rem; /* Supprime tout espace autour du texte */
 }
 
 .error-message {
-  font-size: 1.5rem; /* Taille du texte pour le message d'erreur */
+  font-size: 36px;
+    width: 872px;
+    height: 51px; /* Taille du texte pour le message d'erreur */
   color: #FF6060; /* Texte rouge pour correspondre au style du code d'erreur */
   margin: 1rem; /* Espacement en haut et en bas pour séparer des autres éléments */
 }
@@ -25,21 +35,28 @@
 .return-link {
   text-decoration: underline; /* Ajoute un soulignement pour indiquer un lien */
   color: black; /* Texte noir pour contraste avec l'erreur rouge */
-  font-size: 1rem; /* Taille réduite pour le lien */
-  margin-top: 2rem; /* Ajoute de l'espace en haut du lien */
+  font-size: 18px; /* Taille réduite pour le lien */
+  margin-top: 2.5rem; /* Ajoute de l'espace en haut du lien */
 }
 
 @media (max-width: 768px) { /* Styles spécifiques pour les écrans dont la largeur est inférieure ou égale à 768px */
   .error-code {
-    font-size: 6rem; /* Réduit la taille du code d'erreur pour petits écrans */
+    font-size: 96px;
+    width: 198px;
+    height: 99px;
+    margin-top: 4rem;
   }
 
   .error-message {
-    font-size: 1.2rem; /* Réduit la taille du texte pour s'adapter à l'écran */
+    font-size: 18px; /* Réduit la taille du texte pour s'adapter à l'écran */
+    margin: 4rem;
+  }
+  .mobile-break {
+    display: block; /* Change le `span` en bloc, donc il passe à la ligne */
   }
 
   .return-link {
-    font-size: 0.9rem; /* Réduit la taille du lien pour s'adapter */
+    font-size: 14px; /* Réduit la taille du lien pour s'adapter */
   }
 }
 
