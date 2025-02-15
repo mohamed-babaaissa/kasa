@@ -1,8 +1,8 @@
 .property-collapse {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 76px;
+  
 
   .collapse-header {
     h2 {
@@ -19,15 +19,15 @@
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
+
   }
 }
+
 
 .collapse {
   margin: 1rem auto;
   width: 100%;
-  height: 52px;
-  border: 1px solid #ff6060;
   border-radius: 5px;
   overflow: hidden;
   transition: border-color 0.3s ease;
@@ -56,6 +56,7 @@
       white-space: nowrap;
       max-width: calc(100% - 2rem);
       text-align: center; /* Centre le texte */
+      font-size: 1.2rem;
     
     }
 
@@ -78,11 +79,12 @@
     transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
   
     &.open {
-      display: block !important; /* ✅ Assure que c'est visible */
+      display: block;
       max-height: 1000px; /* ✅ Ajuste selon le contenu */
       opacity: 1;
       visibility: visible;
       padding: 1rem;
+      background-color: #fdf7f769;
     }
   }
   
@@ -104,6 +106,7 @@
 .about-collapse {
   width: 80%;
   margin: 2rem auto;
+  gap: 30px;
 
   @media (max-width: 768px) and (min-width: 375px) {
     width: 90%;
@@ -114,9 +117,6 @@
     font-size: 13px;
   }
 }
-
-
-
 
 
 

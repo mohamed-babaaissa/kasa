@@ -7,14 +7,10 @@ import "../assets/styles/Property.scss";
 
 const Property = () => {
   const { id } = useParams();
-  const [openCollapses, setOpenCollapses] = useState({});
 
-  const toggleCollapse = (collapseName) => {
-    setOpenCollapses((prev) => ({
-      ...prev,
-      [collapseName]: !prev[collapseName],
-    }));
-  };
+  // ✅ Déclaration des hooks au début du composant
+  const [isDescriptionOpen, setIsDescriptionOpen] = useState(false);
+  const [isEquipmentsOpen, setIsEquipmentsOpen] = useState(false);
 
   const logement = logements.find((logement) => logement.id === id);
 
@@ -45,37 +41,42 @@ const Property = () => {
           </div>
           <div className="property-rating">
             {[...Array(5)].map((_, index) => (
-              <span key={index} className={`star ${index < rating ? "" : "star-empty"}`}>
-                &#9733;
-              </span>
+              <span key={index} className={`star ${index < rating ? "" : "star-empty"}`}>&#9733;</span>
             ))}
           </div>
         </div>
       </div>
-    
+
       <div className="property-collapse">
-        <div className="showCollapse">
+        {/* Collapse pour la Description */}
+        <div>
           <Collapse
             className="description-collapse"
             title="Description"
             content={description}
-            isOpen={openCollapses["description"]}
-            onClick={() => toggleCollapse("description")}
+            isOpen={isDescriptionOpen}
+            onClick={() => setIsDescriptionOpen(!isDescriptionOpen)}
           />
         </div>
-        <div className="w-48">
+
+        {/* Collapse pour les Équipements */}
+        <div>
           <Collapse
             className="equipments-collapse"
             title="Équipements"
             content={
-              <ul>
-                {equipments.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
+              equipments && equipments.length > 0 ? (
+                <ul>
+                  {equipments.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p>Aucun équipement disponible.</p>
+              )
             }
-            isOpen={openCollapses["equipments"]}
-            onClick={() => toggleCollapse("equipments")}
+            isOpen={isEquipmentsOpen}
+            onClick={() => setIsEquipmentsOpen(!isEquipmentsOpen)}
           />
         </div>
       </div>
